@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Студия веб-разработки ContentMake</title>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <script src="js/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/swipebox.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta name="keywords" content="веб-студия, адаптивный дизайн, разработка сайтов, наполнение контентом" />
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="header" id="home">
+            <div class="header-left">
+                <div class="menu">
+                    <a href="#" class="right_bt" id="activator"><img src="images/menu.svg" alt="" width="30" height="25"/></a>
+                    <div class="box" id="box">
+                        <div class="box_content">
+                            <div class="menu_box_list">
+                                <ul>
+                                    <li class="active"><a href="#home" class="scroll">В начало</a></li>
+                                    <li><a href="#about" class="scroll">О нас</a></li>
+                                    <li><a href="#portfolio" class="scroll">Портфолио</a></li>
+                                    <li><a href="#contact" class="scroll">Контакты</a></li>
+                                    <div class="clearfix"></div>
+                                </ul>
+                            </div>
+                            <a class="boxclose" id="boxclose"><img src="images/close.svg" alt="Закрыть" width="30" height="30"></a>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var $ = jQuery.noConflict();
+                        $(function() {
+                            $('#activator').click(function() {
+                                $('#box').animate({
+                                    'top': '0px'
+                                }, 500);
+                            });
+                            $('#boxclose').click(function() {
+                                $('#box').animate({
+                                    'top': '-700px'
+                                }, 500);
+                            });
+                        });
+                        $(document).ready(function() {
+                            //Hide (Collapse) the toggle containers on load
+                            $(".toggle_container").hide();
+                            //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+                            $(".trigger").click(function() {
+                                $(this).toggleClass("active").next().slideToggle("slow");
+                                return false; //Prevent the browser jump to the link anchor
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="header-left-top">
+                    <div class="logo">
+                        <a href="#"><img src="images/logo.png" alt=" " /></a>
+                    </div>
+                    <h1>Студия ContentMake <span>Мы знаем нашу работу </span>Нам доверяют</h1>
+                </div>
+                <div class="header-left-bottom">
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header_slider">
+                    <div class="slide"><span>Slide 1</span> </div>
+                    <div class="slide"> <span>Slide 2</span> </div>
+                    <div class="slide"><span>Slide 3</span> </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="d_line tomato"></div>
+        <div class="content">
+            <div class="container">
+                <div class="about" id="about">
+                    <div class="about-top">
+                        <h3>Немного о нас</h3>
+                        <p>Мы - бесстрашная веб-студия. Начав свой путь в 2014 году, мы с высоко поднятой головой ворвались в WEB. Лишь слегка уменьшив угол наклона, мы довели до победного конца более 25000 различных заказов по всему миру!</p>
+                    </div>
+                    <div class="adout-bottom">
+                        <div class="col-md-3 about-in">
+                            <h4><label> </label> Пунктуальность</h4>
+                            <p>Вся работа всегда выполняется в поставленные сроки. Соблюдение сроков - один из важнейших элементов доверия, а <span>Вы всегда можете доверять нам.</span> Мы ценим Ваше отношение</p>
+                        </div>
+                        <div class="col-md-3 about-in">
+                            <h4><label> </label> Профессионализм</h4>
+                            <p>Мы гордимся каждым нашим сотрудником. Любой член нашей команды <span>знает свою часть работы лучше всех</span> и с диким энтузиазмом берется за задание любой сложности</p>
+                        </div>
+                        <div class="col-md-3 about-in">
+                            <h4><label> </label> Всегда на связи</h4>
+                            <p><span>Мы не боимся ответственности.</span> Если мы беремся за проект, мы обязательно доведем его до конца и будем готовы оказать поддержку в любое время и при любых обстоятельствах</p>
+                        </div>
+                        <div class="col-md-3 about-in">
+                            <h4><label> </label> Продуманность</h4>
+                            <p>Опыт нашей студии позволяет нам утверждать, что нет ничего важнее, чем <span>слаженность и продуманность</span> работы каждого члена команды. Благодаря этому мы всегда уверены в своих силах</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d_line red_orange"></div>
+            <div class="designer">
+                <div class=" designer-top">
+                    <h4>Алина</h4>
+                    <span>Front-end программист</span>
+                    <p>Данный специалист "оживляет" сайты. Главная задача фронт-энд разработчика — сделать максимально удобным взаимодействие пользователей с сайтом или веб-приложением.</p>
+                </div>
+                <div class=" designer-top designer-in">
+                    <h4>Тимур</h4>
+                    <span>Дизайнер</span>
+                    <p>Важным аспектом этой должности является интерпретация коммуникационной стратегии клиента и построение творческих концепций в соответствии с этой стратегией.</p>
+                </div>
+                <div class=" designer-top designer-in-top">
+                    <h4>Артур</h4>
+                    <span>Back-end программист</span>
+                    <p>Занимается серверной частью веб-сайта. Он обеспечивает вывод необходимого контента из базы данных в нужных участках сайа, защищает сайт от взлома. </p>
+                </div>
+                <div class="designer-top designer-in-on">
+                    <h4>Марина</h4>
+                    <span>Координатор</span>
+                    <p>Каждый проект индивидуален координатор смотрит на проект сверху вниз, видит каждый проблемный вопрос, после чего взаимодействует со всеми специалистами в студии.
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="d_line red_blue"></div>
+            <div class="process">
+                <div class="container">
+                    <div class="process-top">
+                        <h3>Этапы работы:</h3>
+                        <p>Заходя на коммерческий сайт, посетитель попадает в воронку продаж. Продвинется ли он дальше, во многом зависит от того, насколько грамотно этот сайт сделан: учтены ли интересы и мотивы целевой аудитории, корректно ли работает функционал,
+                            удобен ли интерфейс, достаточно ли качественно и привлекательно представлены ваши товары или услуги. Чем больше пользователей поверит вашему сайту, чем удобнее им будет, тем больше заявок вы получите. От этого напрямую зависит
+                            прибыль, даже если интернет – не единственный маркетинговый канал, который вы задействуете. Поэтому к созданию сайта стоит подходить обстоятельно – результат того стоит.</p>
+                    </div>
+                    <div class="process-bottom ">
+                        <div class="col-md-3 process-in">
+                            <a href="#"><img src="images/b1.png" alt="" ></a>
+                            <h4>Проектирование</h4>
+                            <p>Эффективный сайт начинается с тщательно продуманного плана. Мы спроектируем прототип вашего сайта, продумав оптимальную систему для решения ваших задач.</p>
+                        </div>
+                        <div class="col-md-3 process-in">
+                            <a href="#"><img src="images/b2.png" alt="" ></a>
+                            <h4>Разработка</h4>
+                            <p>На основе утвержденного клиентом прототипа мы разрабатываем дизайн сайта и его программную часть. Разработка ведется в соответствии с техническим заданием.</p>
+                        </div>
+                        <div class="col-md-3 process-in">
+                            <a href="#"><img src="images/b3.png" alt="" ></a>
+                            <h4>Интеграция</h4>
+                            <p>Корректная интеграция вашего веб-ресурса в выбранную вами CMS — систему управления сайтом. Мы работаем с коммерческой CMS «1С-Битрикс» и бесплатной CMS Joomla.</p>
+                        </div>
+                        <div class="col-md-3 process-in">
+                            <a href="#"><img src="images/b4.png" alt="" ></a>
+                            <h4>Поддержка</h4>
+                            <p>Работы различной степени сложности для решения задач и проблем, возникающих в процессе функционирования сайта.</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <div id="top"></div>
+            <section class="gallery" id="portfolio">
+                <h2 class="porfolio_header">Портфолио</h2>
+                <div class="row">
+                    <ul>
+                        <a href="#" class="close"></a>
+                        <li>
+                            <a class="image1" href="#item01"></a>
+                        </li>
+                        <li>
+                            <a class="image2" href="#item02"></a>
+                        </li>
+                        <li>
+                            <a class="image3" href="#item03"></a>
+                        </li>
+                        <li>
+                            <a class="image4" href="#item04"></a>
+                        </li>
+                        <li>
+                            <a class="image5" href="#item05"></a>
+                        </li>
+                        <li>
+                            <a class="image6" href="#item06"></a>
+                        </li>
+                        <li>
+                            <a class="image7" href="#item07"></a>
+                        </li>
+                        <li>
+                            <a class="image8" href="#item08"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- / row -->
+                <!-- Item 01 -->
+                <div id="item01" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Торговый комплекс «КОНСТРУКТОР»</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="images/konstruktor.jpg" alt="Торговый комплекс «КОНСТРУКТОР»">
+                    </div>
+                </div>
+                <div id="item02" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Транспортная компания «ТрансЛогистик»</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="images/tlogist.jpg" alt="Транспортная компания «ТрансЛогистик»">
+                    </div>
+                </div>
+                <div id="item03" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Item 01</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/22177/screenshots/1379781/winterletters-jeremiahbritton-dribbble.png" alt="">
+                    </div>
+                </div>
+                <div id="item04" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Item 01</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/22177/screenshots/1379781/winterletters-jeremiahbritton-dribbble.png" alt="">
+                    </div>
+                </div>
+                <div id="item05" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Item 01</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/22177/screenshots/1379781/winterletters-jeremiahbritton-dribbble.png" alt="">
+                    </div>
+                </div>
+                <div id="item06" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Item 01</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/22177/screenshots/1379781/winterletters-jeremiahbritton-dribbble.png" alt="">
+                    </div>
+                </div>
+                <div id="item07" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Item 01</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/22177/screenshots/1379781/winterletters-jeremiahbritton-dribbble.png" alt="">
+                    </div>
+                </div>
+                <div id="item08" class="port">
+                    <div class="row">
+                        <div class="description">
+                            <h2>Item 01</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                        </div>
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/22177/screenshots/1379781/winterletters-jeremiahbritton-dribbble.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <div class="d_line red_orange"></div>
+            <div class="start">
+                <div class="container">
+                    <div class="start-top">
+                        <h3>Начиная с 2014 года</h3>
+                    </div>
+                    <div class="start-bottom ">
+                        <div class="col-md-2 start-in">
+                            <a><img src="images/s1.svg" width="85" height="75" alt=""></a>
+                            <span> 1000 и 1 шаурма </span>
+                        </div>
+                        <div class="col-md-2 start-in">
+                            <a><img src="images/s2.svg" width="85" height="75" alt=""></a>
+                            <span> 40 книг </span>
+                        </div>
+                        <div class="col-md-2 start-in">
+                            <a><img src="images/s3.svg" width="85" height="75" alt=""></a>
+                            <span> 25000+ задач </span>
+                        </div>
+                        <div class="col-md-2 start-in">
+                            <a><img src="images/s4.svg" width="85" height="75" alt=""></a>
+                            <span> 450 клиентов </span>
+                        </div>
+                        <div class="col-md-2 start-in">
+                            <a><img src="images/s5.svg" width="85" height="75" alt=""></a>
+                            <span> 30350 чашек кофе </span>
+                        </div>
+                        <div class="col-md-2 start-in">
+                            <a><img src="images/s6.svg" width="85" height="75" alt=""></a>
+                            <span> 1 дерево </span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <!-- <div class="blog" id="blog">
+		<div class="container">
+			<div class="blog-top">
+				<h3>BLOG</h3>
+			</div>
+			<div class="blog-bottom ">
+				<div class="col-md-6 blog-in">
+					<a href="#"><img class="img-responsive" src="images/bo1.jpg" alt=""></a>
+					<h5><a href="#">Lorem ipsum dolor sit amet, con ectetur adipiscing elit. </a></h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie purus vitae libero faucibus lacinia.
+					Praesent pellentesque erat magna, eget elementum massa aliquet a. Sed luctus aliquam interdum. Quisque facilisis dapibus suscipit.   </p>
+					<div class="bottom-blog">
+						<span class="john"> by <b>John Doe</b></span>
+						<a href="#" class="more-read"> read more...</a>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-3 blog-in">
+					<a href="#"><img class="img-responsive" src="images/bo2.jpg" alt=""></a>
+					<h5><href="#">Lorem ipsum dolor sit amet. </a></h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie purus vitae libero faucibus lacinia. </p>
+					<div class="bottom-blog">
+						<span class="john"> by <b>John Doe</b></span>
+						<a href="#" class="more-read"> read more...</a>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-3 blog-in">
+					<a href="#"><img class="img-responsive" src="images/bo3.jpg" alt=""></a>
+					<h5><a href="#">Lorem ipsum dolor sit amet.</a> </h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie purus vitae libero faucibus lacinia.</p>
+					<div class="bottom-blog">
+						<span class="john"> by <b>John Doe</b></span>
+						<a href="#" class="more-read"> read more...</a>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div> -->
+            <!---->
+            <div class="bottom-content">
+                <div class="container">
+                    <!-- requried-jsfiles-for owl -->
+                    <link href="css/owl.carousel.css" rel="stylesheet">
+                    <!-- //requried-jsfiles-for owl -->
+                    <!-- start content_slider -->
+                    <h3>Наши компетенции:</h3>
+                    <div id="owl-demo" class="owl-carousel text-center">
+                        <div class="item">
+                            <img class="lazyOwl" src="images/Bitrix.png" alt="1С-Битрикс" title="1С-Битрикс" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/joomla.png" alt="Joomla" title="Joomla" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/modx.png" alt="ModX" title="ModX" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/netcat.png" alt="NetCat" title="NetCat" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/opencart.png" alt="OpenCart" title="OpenCart" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/UMI.png" alt="UMI.CMS" title="UMI.CMS" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/prestashop.png" alt="PrestaShop" title="PrestaShop" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/webasyst.png" alt="Webasyst" title="Webasyst" width="200" height="200">
+                        </div>
+                        <div class="item">
+                            <img class="lazyOwl" src="images/drupal.png" alt="Drupal" title="Drupal" width="200" height="200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="want_work">
+                <div class="container">
+                    <div class="about" id="WantWork">
+                        <div class="about-top">
+                            <h3>Хотите работать с нами?</h3>
+                            <p>Мы находимся в постоянном поиске лучших специалистов, знающих свое дело лучше нас и умеющих добиваться качественного результата. Добро пожаловать в нашу команду!</p>
+                            <p class="we_need">Нам нужны:</p>
+                        </div>
+                        <div class="adout-bottom">
+                            <div class="col-md-3 about-in">
+                                <h4><label> </label> Дизайнеры и проектировщики</h4>
+                                <p>Надоело месяцами искать очередной заказ? Опять питаешься овсянкой с помидорами уже двенадцатый день подряд? Забываешь надеть второй носок?</p>
+                                <p>Все общение с клиентом лежит на нас. «Чуть-чуть подправьте фиолетовый на черно-белый» не будет. Добро пожаловать, все Твои проблемы решены (кроме второго носка).</p>
+                            </div>
+                            <div class="col-md-3 about-in">
+                                <h4><label> </label> Front- и back-end специалисты</h4>
+                                <p>«Запускать код силой мысли». Если при встрече с джином Вы загадали бы именно это желание, тогда вам точно сюда. Отделу по борьбе с личной жизнью не хватает именно Вас.</p>
+                                <p>Кодить, отдебажить, забэкапить, запилить функционал - люди перестанут тебя понимать, но ты возглавишь восстание машин.<br>P.S. Любовь к мышлению приветствуется (ко сну - нет).</p>
+                            </div>
+                            <div class="col-md-3 about-in">
+                                <h4><label> </label> Координаторы проектов</h4>
+                                <p>Может, ты ответственный, внимательный и исполнительный, но способен ли ты вырвать сердце аки Данко и повести за собой людей к заветной цели - завершению проекта?</p>
+                                <p>Способен! Добро пожаловать в тайное общество повелителей...</p>
+                                <p class="hidden_text">Предсказание сбылось! Вы были избраны стать одним из нас!</p>
+                            </div>
+                            <div class="col-md-3 about-in">
+                                <h4><label> </label> Менеджеры</h4>
+                                <p>Борщ из нервного напряжения с легким послевкусием нервного срыва. Чай из своих слез. Конфеты «Сегодня без сна». Чувствуете себя комфортно только так?</p>
+                                <p>Ваше место здесь. Огромное количество возможностей показать себя на реальных задачах, веселая и доброжелательная команда. Ну что нужно еще?</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="twit">
+                <div id="owl-prof" class="owl-carousel text-center">
+                    <div class="item">
+                        <img width="150" src="images/reply.jpg " alt=" ">
+                        <p>Нужно было сделать лендинг для моей фирмы по продаже цветов. Надо отметить, что все работы были выполнены согласно оговоренным срокам на достаточно высоком профессиональном уровне.</p>
+                        <small>23.06.2017</small>
+                    </div>
+                    <div class="item">
+                        <img width="150" src="images/reply.jpg " alt=" ">
+                        <p>Нужно было сделать лендинг для моей фирмы по продаже цветов. Надо отметить, что все работы были выполнены согласно оговоренным срокам на достаточно высоком профессиональном уровне.</p>
+                        <small>23.06.2017</small>
+                    </div>
+                    <div class="item">
+                        <img width="150" src="images/reply.jpg " alt=" ">
+                        <p>Нужно было сделать лендинг для моей фирмы по продаже цветов. Надо отметить, что все работы были выполнены согласно оговоренным срокам на достаточно высоком профессиональном уровне.</p>
+                        <small>23.06.2017</small>
+                    </div>
+                    <div class="item">
+                        <img width="150" src="images/reply.jpg " alt=" ">
+                        <p>Нужно было сделать лендинг для моей фирмы по продаже цветов. Надо отметить, что все работы были выполнены согласно оговоренным срокам на достаточно высоком профессиональном уровне.</p>
+                        <small>23.06.2017</small>
+                    </div>
+                    <div class="item">
+                        <img width="150" src="images/reply.jpg " alt=" ">
+                        <p>Нужно было сделать лендинг для моей фирмы по продаже цветов. Надо отметить, что все работы были выполнены согласно оговоренным срокам на достаточно высоком профессиональном уровне.</p>
+                        <small>23.06.2017</small>
+                    </div>
+                </div>
+            </div>
+            <div class="contact" id="contact">
+                <div class="contact-left">
+                    <div class="contact-overlay">
+                        <h3>Напишите нам!</h3>
+                        <p></p>
+                        <form action="#" method="post" id="SendMassage">
+                            <input type="text" placeholder="ВАШЕ ИМЯ">
+                            <input type="text" placeholder="EMAIL">
+                            <textarea placeholder="ВАШЕ СООБЩЕНИЕ"></textarea>
+                            <div class="captcha_layout">
+                                <div class="cap">
+                                    <div class="CaptchaWrap">
+                                        <div id="CaptchaImageCode" class="CaptchaTxtField">
+                                            <canvas id="CapCode" class="capcode" height="80%"></canvas>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="UserCaptchaCode" class="CaptchaTxtField" placeholder="ВВЕДИТЕ КОД С КАРТИНКИ">
+                                    <div id="WrongCaptchaError" class="error"></div>
+                                </div>
+                                <div class="send-in">
+                                    <input type="submit" value="ОТПРАВИТЬ">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <div class="live">
+                        <div class="logo-bottom">
+                            <a href="#"><img src="images/logo.png" alt=" " /></a>
+                            <h2>Студия ContentMake </h2>
+                        </div>
+                        <p class="tagline">
+                            Пунктуальность. Превосходство. Bon Appétit.
+                        </p>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+                <script type="application/x-javascript">
+                    addEventListener("load", function() {
+                        setTimeout(hideURLbar, 0);
+                    }, false);
+
+                    function hideURLbar() {
+                        window.scrollTo(0, 1);
+                    }
+                </script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        /*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear'
+					 		};
+							*/
+                        $().UItoTop({
+                            easingType: 'easeOutQuart'
+                        });
+                    });
+                </script>
+                <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+            </div>
+        </div>
+        <!---->
+        <script src="js/owl.carousel.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#owl-demo").owlCarousel({
+                    items: 5,
+                    lazyLoad: true,
+                    autoPlay: true,
+                    pagination: true,
+                });
+            });
+            $(document).ready(function() {
+                $("#owl-prof").owlCarousel({
+                    items: 1,
+                    lazyLoad: true,
+                    autoPlay: true,
+                    pagination: true,
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            var cd;
+
+            $(function() {
+                CreateCaptcha();
+            });
+
+            // Create Captcha
+            function CreateCaptcha() {
+                //$('#InvalidCapthcaError').hide();
+                var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+                    'p',
+                    'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
+
+                var i;
+                for (i = 0; i < 6; i++) {
+                    var a = alpha[Math.floor(Math.random() * alpha.length)];
+                    var b = alpha[Math.floor(Math.random() * alpha.length)];
+                    var c = alpha[Math.floor(Math.random() * alpha.length)];
+                    var d = alpha[Math.floor(Math.random() * alpha.length)];
+                    var e = alpha[Math.floor(Math.random() * alpha.length)];
+                    var f = alpha[Math.floor(Math.random() * alpha.length)];
+                }
+                cd = a + ' ' + b + ' ' + c + ' ' + d + ' ' + e + ' ' + f;
+                $('#CaptchaImageCode').empty().append('<canvas id="CapCode" class="capcode" height="80%"></canvas>')
+
+                var c = document.getElementById("CapCode"),
+                    ctx = c.getContext("2d"),
+                    x = c.width / 2,
+                    image = new Image();
+
+                image.src = "images/amiro.png";
+                image.onload = function() {
+                    var pattern = ctx.createPattern(image, "repeat");
+                    ctx.fillStyle = pattern;
+                    ctx.fillRect(0, 0, c.width, c.height);
+                    ctx.font = "1em Roboto";
+                    ctx.fillStyle = "white";
+                    ctx.textAlign = "center";
+                    ctx.setTransform(1, -0.12, 0, 1, 0, 15);
+                    ctx.fillText(cd, x, 55);
+                };
+            }
+
+            // Validate Captcha
+            function ValidateCaptcha() {
+                var string1 = removeSpaces(cd);
+                var string2 = removeSpaces($('#UserCaptchaCode').val());
+                if (string1 == string2) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            // Remove Spaces
+            function removeSpaces(string) {
+                return string.split(' ').join('');
+            }
+
+            // Check Captcha
+            $("#SendMassage").submit(function(event) {
+                event.preventDefault();
+                var result = ValidateCaptcha();
+                if ($("#UserCaptchaCode").val() == "" || $("#UserCaptchaCode").val() == null || $("#UserCaptchaCode").val() == "undefined") {
+                    $('#WrongCaptchaError').text('Пожалуйста, введите код с картинки.').show();
+                    $('#UserCaptchaCode').focus();
+                } else {
+                    if (result == false) {
+                        $('#WrongCaptchaError').text('Неверный код! Попробуйте снова.').show();
+                        CreateCaptcha();
+                        $('#UserCaptchaCode').focus().select();
+                        return false;
+                    } else {
+                        $('#UserCaptchaCode').val('').attr('place-holder', 'Введите код с картинки');
+                        CreateCaptcha();
+                        $('#WrongCaptchaError').fadeOut(100);
+                        $('#SuccessMessage').fadeIn(500).css('display', 'block').delay(5000).fadeOut(250);
+                    }
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            // portfolio
+            $('.gallery ul li a').click(function() {
+                var itemID = $(this).attr('href');
+                $('.gallery ul').addClass('item_open');
+                $(itemID).addClass('item_open');
+                return false;
+            });
+            $('.close').click(function() {
+                $('.port, .gallery ul').removeClass('item_open');
+                return false;
+            });
+
+            $(".gallery ul li a").click(function() {
+                $('html, body').animate({
+                    scrollTop: parseInt($("#top").offset().top)
+                }, 400);
+            });
+        </script>
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event) {
+                    event.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }, 1000);
+                });
+            });
+        </script>
+        <!---->
+        <script src="js/jquery.swipebox.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            jQuery(function($) {
+                $(".swipebox").swipebox();
+            });
+        </script>
+        <script src="js/TweenMax.min.js" type="text/javascript"></script>
+        <script src="js/slider.js" type="text/javascript"></script>
+    </body>
+
+</html>
